@@ -1,9 +1,9 @@
 
 
-GET http://localhost:3000/todos/?category=WOR&status=DON
+GET http://localhost:3000/todos/?category=WORK&status=DONE
 ###
 
-GET http://localhost:3000/todos/1/
+GET http://localhost:3000/todos/6/
 ###
 
 GET http://localhost:3000/agenda/?date=2021-1-12
@@ -18,10 +18,16 @@ Content-Type: application/json
   "priority": "LOW",
   "status": "TO DO",
   "category": "HOME",
-  "dueDate": "2021-02-30"
+  "dueDate": "2021-02-22"
 }
 ###
 DELETE http://localhost:3000/todos/6/
 ###
 
 
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json
+
+{
+      "priority": "HIGH"
+}
